@@ -3,12 +3,11 @@ let playerScore = 0;
 game();
 
 function game() {
-
     for (let i= 1; i <= 5; i++){
-
         let playerSelection = prompt("Input your hand! (rock, paper, scissors)").toLowerCase()
 
-        if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
+        if (playerSelection === 'rock' || playerSelection === 'paper' ||
+          playerSelection === 'scissors') {
                 playRound(computerPlay(), playerSelection)
             } else {
                 alert("Invalid input.")
@@ -34,7 +33,9 @@ function playRound(computerSelection, playerSelection) {
 
     if (playerSelection === computerSelection){
         console.log("Its a draw");
-    } else if((playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper')){
+    } else if((playerSelection === 'paper' && computerSelection === 'rock') ||
+      (playerSelection === 'rock' && computerSelection === 'scissors') ||
+      (playerSelection === 'scissors' && computerSelection === 'paper')){
         console.log(youWin);
         playerScore += 1;
     } else {
